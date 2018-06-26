@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="cover.css"/>
+    <link rel="stylesheet" href="PaymentOptions.css">
+    <link rel="stylesheet" href="VehiclePrice.css">
+    <link rel="stylesheet" href="IncentivesApplied.css">
+    <link rel="stylesheet" href="TradeInValue.css">
+</head>
+
+<>
+
+<main>
+    <header>
+        <img src="http://oem.onstation.com/static/swaps/cadillac/2017/png/cadillac_2017_escalade_d34_rwd_suv_1sc_h2x_g1w_03_jelly.png"
+             alt="Image Not Available"/>
+
+        <h1>CADILLAC ESCALADE</h1>
+    </header>
+
+
+    <section class="payments">
+        <h2>Finance<br>$400/mo.</h2>
+        <h2>Cash<br>$37,650</h2>
+    </section>
+
+    <nav>
+        <button id="button1">Payment Options</button>
+        <button id="button2">Vehicle<br/> Price</button>
+        <button id="button3">Incentives to be Applied</button>
+        <button id="button4">Trade-In Value</button>
+        <button id="button5">Taxes & <br/> Fees</button>
+        <button id="button6">Credit <br/>Score</button>
+        <button id="button7">Protect My Vehicle</button>
+        <button id="button8">Review My Deal</button>
+        <button id="button9">Vehicle<br/>Information</button>
+    </nav>
+
+    <button class="submitBtn">SEND TO DEALERSHIP</button>
+
+    <div class="white_BG"></div>
+
+    <!--PAYMENT OPTIONS (1)-->
+    <div id="myPopUp1" class="PopUp1">
+        <div class="PopUp_Info1">
+            <div class="PaymentOptions">Payment Options</div>
+            <h2 class="h2_text">Choose a payment type below:</h2>
+            <br>
+
+            <div>
+            <button class="Redbox" onclick="openFinanceTab()" onclick="closeFinanceTab()">Finance</button>
+            <button class="Redbox" onclick="openLeaseTab()">Lease</button>
+            <button class="Redbox">Cash</button>
+            </div>
+
+                <div id= "mySidenav" class="sidenav">
+                    <form class="finance">
+                        <h2 class="h2_text2">Enter your down payment:</h2>
+                        <h2 style="text-align: center;">$<input class="dp" type="text"></h2>
+                    </form>
+                    <h2 class="h2_text2">Monthly Term: </h2>
+                 <div>
+                     <button class="Redbox">48</button>
+                     <button class="Redbox">60</button>
+                     <button class="Redbox">72</button>
+                 </div>
+
+                    <h2 class="h3">Estimated Monthly Payment:</h2>
+                </div>
+
+            <div id= "mySidenav2" class="sidenav2">
+                <form class="lease">
+                    <h2 class="h2_text2">Enter your down payment:</h2>
+                    <h2 style="text-align: center;">$<input class="dp" type="text"></h2>
+                </form>
+                <h2 class="h2_text2">Monthly Term: </h2>
+                <div>
+                    <button class="Redbox">24</button>
+                    <button class="Redbox">36</button>
+                    <button class="Redbox">39</button>
+                </div>
+                <br>
+                <h2 class="h2_text2">Milage Plan:</h2>
+                <div>
+                    <button class="Redbox">10,000</button>
+                    <button class="Redbox">12,000</button>
+                    <button class="Redbox">15,000</button>
+                </div>
+            </div>
+            <p class="close1 closeWindow1">X</p>
+            <button class="PopUp_Submit1">Submit</button>
+        </div>
+
+    </div>
+
+    <script>
+        function openFinanceTab() {
+            console.log("one");
+            document.getElementById("mySidenav").style.width= "100%";
+            document.getElementById("mySidenav2").style.width= "0";
+            // document.getElementById("mySidenav").style.display = "block";
+            // document.getElementById("mySidenav2").style.display = "none";
+        }
+
+
+        function closeFinanceTab() {
+            console.log("two");
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+
+    <script>
+        function openLeaseTab() {
+            console.log("three");
+            // document.getElementById("mySidenav").style.display = "none";
+            // document.getElementById("mySidenav2").style.display = "block";
+            document.getElementById("mySidenav2").style.width = "100%";
+            document.getElementById("mySidenav").style.width= "0";
+        }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav2").style.width = "0";
+        // }
+    </script>
+
+
+    <!--VEHICLE PRICE (2)-->
+    <div id="myPopUp2" class="PopUp2">
+        <div class="PopUp_Info2">
+            <div class="VehiclePrice">Vehicle Price</div>
+            <table style="width: 80%; margin: auto; height: 200px; margin-left: 15%;">
+                <tr>
+                    <td style="color: white;font-family: 'Raleway', sans-serif;letter-spacing: .17rem;">MSRP</td>
+                    <td style="color: white; text-decoration: line-through;font-family: 'Raleway', sans-serif;letter-spacing: .17rem;">$18,000.00</td>
+
+                </tr>
+
+                <tr>
+                    <td style="color: white;font-family: 'Raleway', sans-serif;letter-spacing: .17rem; ">Our Price</td>
+                    <td style="color: white;font-family: 'Raleway', sans-serif;letter-spacing: .17rem;">$17,000.00</td>
+
+                </tr>
+
+                <tr>
+                    <td style="color: white;font-family: 'Raleway', sans-serif;letter-spacing: .17rem; ">Incremental Consumer Cash Program</td>
+                    <td style="color: white;font-family: 'Raleway', sans-serif;letter-spacing: .17rem;">-$1,000.00</td>
+                </tr>
+
+                <tr>
+                    <td style="color: white; font-weight: bold;font-family: 'Raleway', sans-serif;letter-spacing: .17rem; ">Final Vehicle Price</td>
+                    <td style="color: white; font-weight: bold;font-family: 'Raleway', sans-serif;letter-spacing: .17rem;">$17,000.00</td>
+                </tr>
+
+            </table>
+            <div style="color: white; margin: 4%;font-family: 'Raleway', sans-serif;font-size: 20px;text-align: center;letter-spacing: .17rem;">Still not
+                satisfied? Make us an offer and we will see what we can do.
+            </div>
+            <form id="form" method="post" action="" style="height: 15px;">
+                <input id="amount" name="amount" type="text" maxlength="15"
+                       style="background: black; border: none; margin-left: 65%; color: white; height: 25px;"/>
+            </form>
+
+            <div style="color: white; font-family: 'Raleway', sans-serif; letter-spacing: .17rem; font-size: 26px;position: relative;left: 550px;top: -43px;">$</div>
+
+            <p class="close2 closeWindow2">X</p>
+            <button class="PopUp_Submit2">Submit</button>
+
+        </div>
+    </div>
+
+    <!--INCENTIVES APPLIED (3)-->
+    <div id="myPopUp3" class="PopUp3">
+        <div class="PopUp_Info3">
+            <h4 class="IncentivesApplied">Incentives</h4>
+            <h5 class="IA_text1">Tap to toggle finance, lease, and cash offers.</h5>
+            <button class="FinanceTab">Finance</button>
+            <button class="LeaseTab">Lease</button>
+            <button class="CashTab">Cash</button>
+
+        </div>
+        <p class="close closeWindow3">X</p>
+        <button class="PopUp_Submit">Submit</button>
+
+    </div>
+
+
+
+
+
+            <!--Vehicle Information (9)-->
+            <div id="myPopUp9" class="PopUp9">
+                <div class="PopUp_Info9">
+                    <div class="VehicleInfo"></div>
+
+
+
+                </div>
+            </div>
+
+
+
+    <script src="PopUp.js"></script>
+
+
+</main>
+</html>
+</body>
+
+
+
+
+
+
+
+
+
